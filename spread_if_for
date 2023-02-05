@@ -1,3 +1,4 @@
+```
 void main() {
   // spread operator (...)
   // collection if
@@ -15,3 +16,4 @@ void main() {
   //fruits.addAll(orangeAndPear);
   print(bigFruits);
 }
+```
