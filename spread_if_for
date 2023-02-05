@@ -1,0 +1,17 @@
+void main() {
+  // spread operator (...)
+  // collection if
+  // collection for
+
+  const orangeAllergy = true;
+
+  const appleAndPinapple = ['apple', 'pineapple'];
+  const orangeAndPear = [if(!orangeAllergy) 'orange', 'pear'];
+
+  final fruits = ['watermelon', ...appleAndPinapple, ...orangeAndPear, ];
+
+  var bigFruits = ['BANANA', for(final fruit in fruits) fruit.toUpperCase()];
+  //fruits.addAll(appleAndPinapple);
+  //fruits.addAll(orangeAndPear);
+  print(bigFruits);
+}
