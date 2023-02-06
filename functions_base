@@ -1,0 +1,24 @@
+void main() {
+  sayHello();
+  String myName = getName();
+  print(myName);
+
+  String myAge = getAge(35);
+  print(myAge);
+}
+
+void sayHello() => print("Hello, Sergey");
+String getName() => "Sergey";
+String getAge(int age) => "Your age $age";
+
+//void sayHello() {
+//  print("Hello, Sergey");
+//}
+
+//String getName() {
+//  return "Sergey";
+//}
+
+//String getAge(int age) {
+//  return "Your age $age";
+//}
