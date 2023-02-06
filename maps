@@ -1,0 +1,71 @@
+
+void main() {
+  final Map<String, int> emptyMap = {};
+  final emptyMap1 = <String, int>{};
+
+  final emptySomething = {};
+  final mySet = <String>{};
+
+  final caloriesInFood = {
+    'apple': 200,
+    'pineapple': 150,
+    'watermelon': 650,
+  };
+
+  final test = {1:'one', 2:'two'};
+
+  print(caloriesInFood);
+  print(test);
+
+  final caloriesInFood1 = {
+    'apple': [200, 650],
+    'pineapple': 150,
+  };
+
+  print(caloriesInFood1);
+
+    final caloriesInFood2 = {
+    'apple': 200,
+    'pineapple': 200,
+    'watermelon': 200,
+  };
+
+  // Accessing Key-Value Pairs
+  final numberCaloriesInApple = caloriesInFood['apple'];
+  print(numberCaloriesInApple?.isEven);
+
+  //Adding Elements to a Map
+  caloriesInFood['pear'] = 50;
+  print(caloriesInFood);
+
+  //Updating an Element
+  caloriesInFood['pear'] = 100;
+  print(caloriesInFood);
+
+  //Removing elements from a Map
+  caloriesInFood.remove('pear');
+  print(caloriesInFood);
+
+  //Accessing properties
+  print(caloriesInFood.isEmpty);
+  print(caloriesInFood.isNotEmpty);
+  print(caloriesInFood.length);
+  print(caloriesInFood.keys);
+  print(caloriesInFood.values);
+
+  //Checking for Key or Value Existence
+  print(caloriesInFood.containsKey('apple'));
+  print(caloriesInFood.containsValue(500));
+
+  //Looping over elements of a Map
+  //forEach
+  for (var key in caloriesInFood.keys) {
+    print(caloriesInFood[key]);
+  }
+
+  for (final entry in caloriesInFood.entries) {
+    print('${entry.key} -> ${entry.value}');
+  }
+
+
+}
