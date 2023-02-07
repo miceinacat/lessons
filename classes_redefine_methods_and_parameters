@@ -1,0 +1,45 @@
+void main() {
+ var myCar = Car('bmw', 100, 'white');
+ myCar.start();
+}
+
+class Vehicle {
+  late String color;
+
+  Vehicle.fromColor(var color) {
+    this.color = color;
+    print("Call vehicle.fromcolor: $color Constructor");
+  }
+
+    void start() {
+    print("Has started");
+  }
+}
+
+class Car extends Vehicle {
+  late String carName;
+  late int speed;
+
+  Car(String carName, int speed, String color): super.fromColor(color) {
+    this.carName = carName;
+    this.speed = speed;
+    print("Call of Car.Name: $carName, color $color");
+  }
+
+  String get color => super.color;
+
+  void set color(String value) {
+    if (value == "Black") {
+      throw ArgumentError("Please, set other color.");
+    }
+
+    super.color = color;
+  }
+
+  @override
+  void start() {
+    print("The $color $carName");
+    super.start();
+    print("Speed $speed");
+  }
+}
