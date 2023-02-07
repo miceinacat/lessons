@@ -1,0 +1,16 @@
+void main() {
+  Function add = addNumbers(4);
+  int result = add(6);
+  print(result);
+
+  int result2 = addNumbers(5)(6);
+  print(result2);
+
+}
+
+Function addNumbers(int x) { // внешняя функция
+  //int sum(int y) { //вложенная функция
+    //return x + y; // действия с переменными
+  //}
+  return(int y) => x + y;
+}
