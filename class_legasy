@@ -1,0 +1,39 @@
+void main() {
+ var myCar = Car();
+ myCar.carName = "BMW";
+ myCar.color = "red";
+ myCar.start();
+ myCar.open();
+
+ print("");
+
+ var myMoto = Moto();
+ myMoto.type = "Sportbike";
+ myMoto.color = "green";
+ myMoto.start();
+ myMoto.roll();
+}
+
+class Vehicle {
+  late String color;
+
+    void start() {
+    print("Has started");
+  }
+}
+
+class Car extends Vehicle {
+  late String carName;
+
+  void open() {
+    print("open doors");
+  }
+}
+
+class Moto extends Vehicle {
+  late String type;
+
+  void roll() {
+    print("Rolled over in the air");
+  }
+}
