@@ -1,0 +1,29 @@
+void main() {
+  Function person = getName;
+  person();
+  person = getLastname;
+  person();
+
+  getPerson(getName);
+  getPerson(getLastname);
+
+  Function myPerson = getNameOrLastName("Sergey");
+  myPerson();
+}
+
+Function getNameOrLastName(String nameOrLastName) {
+  if(nameOrLastName == "Sergey") return getName;
+  else return getLastname;
+}
+
+void getPerson(Function myFunction) {
+  myFunction();
+}
+
+void getName() {
+  print("Sergey");
+}
+
+void getLastname() {
+  print("Brin");
+}
