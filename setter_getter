@@ -1,0 +1,20 @@
+void main() {
+  var myCar = Car();
+  myCar.carName = "Ford"; // Setter 
+  print(myCar.carName); // getter
+  myCar.percentage = -23.5; //вызываем собственный сеттер
+  print(myCar.percentage); //вызываем собственный геттер
+}
+
+class Car {
+  late String carName;
+  late double _percentWay;
+  
+  void set percentage(double per) {
+    _percentWay = (per > 100 || per < 0) ? _percentWay = 0 : _percentWay = per;
+  }
+
+  double get percentage {
+    return _percentWay;
+  }
+}
