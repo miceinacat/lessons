@@ -1,0 +1,19 @@
+void main() {
+  // Exception
+  // Error
+
+try {
+  var list = [double.parse('3.14'), 2, 3];
+  print("Result:${list[5]}");
+} on RangeError {
+  print("Out of bound of list");
+} 
+catch(e, s) {
+  print("stack trace $s");
+  print("The exception: $e");
+} finally {
+  print("this is finaly");
+}
+
+
+}
