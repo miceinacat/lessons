@@ -1,0 +1,30 @@
+void main() {
+ var myCar = Car('bmw', 'red');
+ myCar.start();
+}
+
+class Vehicle {
+  late String color;
+
+  Vehicle.fromColor(var color) {
+    this.color = color;
+    print("Call vehicle.fromcolor: $color Constructor");
+  }
+
+    void start() {
+    print("Has started");
+  }
+}
+
+class Car extends Vehicle {
+  late String carName;
+
+  Car(String carName, String color): super.fromColor(color) {
+    this.carName = carName;
+    print("Call of Car.Name: $carName, color $color");
+  }
+
+  void open() {
+    print("open doors");
+  }
+}
