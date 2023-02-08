@@ -1,0 +1,39 @@
+import 'dart:html';
+
+void main() {
+
+
+
+// Future (Future API & / await)
+
+// Future API 
+
+// 1) Синхронная функция  - возвращает обычный результат. 
+// Пример: return String, return int и т.д.
+
+// Асинхронная функция - возвращает объект Future (futures).
+// Пример: return Future<String>, return Future<int> и т.д.
+
+// Ссылка на тестовый файл - https://dart.dev/f/dailyNewsDigest.txt
+
+// Ссылка на сервер со верменем - https://rebounce.online/api/time
+  print("The main program: Starts");
+  printFileContent();
+  print("The main program: Ends");
+
+}
+
+printFileContent() {
+  Future<String> fileContent = downloadFile();
+  fileContent.then((resultString) {
+    print("The content on the file is --> $resultString");
+  }).catchError((error) => print("The file not found"));
+}
+
+downloadFile() {
+  Future<String> result = Future.delayed(Duration(seconds: 5), () {
+    return HttpRequest.getString('https://dart.dev/f/dailyNewsDigest.txt');
+  });
+
+  return result;
+} 
